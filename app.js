@@ -10,74 +10,80 @@ Debe funcionar solo con letras minúsculas
 No deben ser utilizados letras con acentos ni caracteres especiales
 Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
 */
-let mensaje = '';
 
 function encriptar(){
-    mensaje = document.getElementById('mensaje').value;
-    let str = mensaje;
+    let str = obtenerCadena('idMensaje');
 
     for (let i = 0; i < str.length; i++) {
 
         if (str[i] == 'e') {
-            console.log(str);
-            str = reemplazarLetra(str, i, 'enter')
-            console.log('entre e');
+            str = reemplazarVocal(str, i, 'enter')
+            //actualizo la posicion del indice
             i += 4;
-            // console.log(str);
             continue
         };
         if (str[i] == 'i') {
-            console.log(str);
-            str = reemplazarLetra(str, i, 'imer')
-            console.log('entre i');
+            str = reemplazarVocal(str, i, 'imer')
+            //actualizo la posicion del indice
             i += 3;
-            // console.log(str);
             continue
         };
         if (str[i] == 'a') {
-            console.log(str);
-            str = reemplazarLetra(str, i, 'ai')
-            console.log('entre a');
+            str = reemplazarVocal(str, i, 'ai')
+            //actualizo la posicion del indice
             i += 1;
-            // console.log(str);
             continue
         };
         if (str[i] == 'o') {
-            console.log(str);
-            str = reemplazarLetra(str, i, 'ober')
-            console.log('entre o');
+            str = reemplazarVocal(str, i, 'ober')
+            //actualizo la posicion del indice
             i += 3;
-            // console.log(str);
             continue
         };
         if (str[i] == 'u') {
-            console.log(str);
-            str = reemplazarLetra(str, i, 'ufat')
-            console.log('entre u');
+            str = reemplazarVocal(str, i, 'ufat')
+            //actualizo la posicion del indice
             i += 3;
-            // console.log(str);
             continue
         };        
 
-        console.log('sali');
-        
     }
 
-    
-    function reemplazarLetra(cadena, indice, reemplazo){
-        return cadena.substring(0,indice) + reemplazo + cadena.substring(indice+1);
-    }
-    
-      
-    console.log(str);
-    //mostrarMensaje();
+    mostrarCadena(str, 'txtCajaMensaje');
+
     return;
-    //console.log(mensaje);
+}
+
+function desencriptar(){
+    let str = obtenerCadena('txtCajaMensaje');
+    
+    str = str.replace(/enter/g, 'e');
+    str = str.replace(/imer/g, 'i');
+    str = str.replace(/ai/g, 'a');
+    str = str.replace(/ober/g, 'o');
+    str = str.replace(/ufat/g, 'u');
+
+    limpiarCaja('txtCajaMensaje');
+    
+    mostrarCadena(str, 'txtCajaMensaje');
+
 }
 
 
 
-function mostrarMensaje(){
-    document.getElementById('txtMostrarMensaje').value = nuevoMensaje;
-    return;
+function reemplazarVocal(cadena, indice, reemplazo){
+    return cadena.substring(0,indice) + reemplazo + cadena.substring(indice+1);
+}
+
+function obtenerCadena(idCadena){
+    return document.getElementById(idCadena).value;
+}
+
+function mostrarCadena(cadena, idTextBox){
+    document.getElementById(idTextBox).value = cadena;
+    //console.log(cadena);
+}
+
+function limpiarCaja(idCaja){
+    document.getElementById(idCaja).value = '';  
 }
