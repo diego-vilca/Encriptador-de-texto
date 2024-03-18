@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de Texto</title>
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" id="idMensaje">
-    <button id="btnEncriptar" onclick="encriptar()">encriptar</button>
-    <textarea name="" id="txtCajaMensaje" cols="30" rows="10"></textarea>
-    <button id="btnDesencriptar" onclick="desencriptar()">desencriptar</button>
+    <main>
+        <div class="section logo">
+            <img src="img/Logo.svg" alt="logo" id="idLogo">
+        </div>
+        <section class="section left">
+            <div class="caja-mensaje">
+                <textarea id="txtCajaMensaje" placeholder="Ingrese el texto aqui"></textarea>                
+            </div>
+            <div class="caja-botones">
+                <p><small>Solo minúsculas y sin acentos</small></p>
+                <div class="contenedor-botones">
+                    <button id="btnEncriptar" onclick="encriptar()">Encriptar</button>
+                    <button id="btnDesencriptar" onclick="desencriptar()">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section right">            
+            <textarea id="txtCajaTraduccion"></textarea>
+        </section>        
+    </main>
     
+    <script src="app.js"></script>
 </body>
 </html>

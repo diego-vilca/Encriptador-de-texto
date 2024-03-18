@@ -49,13 +49,13 @@ function encriptar(){
 
     }
 
-    mostrarCadena(str, 'txtCajaMensaje');
+    mostrarCadena(str, 'txtCajaTraduccion');
 
     return;
 }
 
 function desencriptar(){
-    let str = obtenerCadena('txtCajaMensaje');
+    let str = obtenerCadena('txtCajaTraduccion');
     
     str = str.replace(/enter/g, 'e');
     str = str.replace(/imer/g, 'i');
@@ -63,9 +63,9 @@ function desencriptar(){
     str = str.replace(/ober/g, 'o');
     str = str.replace(/ufat/g, 'u');
 
-    limpiarCaja('txtCajaMensaje');
+    limpiarCaja('txtCajaTraduccion');
     
-    mostrarCadena(str, 'txtCajaMensaje');
+    mostrarCadena(str, 'txtCajaTraduccion');
 
 }
 

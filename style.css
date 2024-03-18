@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F3F5FC;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
+.section {
+    flex: auto; 
+}
+
+.logo {
+    background-color: beige;
+    width: 15%;  
+    text-align: center;
+}
+
+.left {
+    background-color: aquamarine;
+    width: 50%;      
+}
+
+.right {
+    background-color: blueviolet;
+    width: 35%;
+}
+
+#idLogo {
+    max-width: 50%; 
+    height: auto;
+    display: block;
+    margin: 30px auto 0; 
+    border-style: solid;
+    border-color: black;
+}
+
+.caja-mensaje {
+    margin-top: 20vh;
+    height: 60%;
+}
+
+#txtCajaMensaje {
+    height: 100%;
+    width: 100%;
+    background-color:aquamarine;
+    border: none;
+    resize: none;
+} 
+
+#txtCajaMensaje:focus {
+    border: none;
+    outline: none;
+}
+
+small::before {
+    content: "\1F6C8";
+    padding-right: 2px; 
+}
+
+.caja-botones {
+    height: 20%;
+}
+
+.contenedor-botones {
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 10px;
+}
+
+button {
+    display: inline-block; 
+    width: 46%;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    text-align: center; 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #007bff; 
+    color: #ffffff; 
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+button:active {
+    background-color: #0056b3; 
+    transform: translateY(1px); 
+}
