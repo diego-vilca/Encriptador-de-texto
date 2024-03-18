@@ -12,7 +12,7 @@ Debe ser posible convertir una palabra para la versión encriptada también devo
 */
 
 function encriptar(){
-    let str = obtenerCadena('idMensaje');
+    let str = obtenerCadena('txtCajaMensaje');
 
     for (let i = 0; i < str.length; i++) {
 

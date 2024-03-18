@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: #F3F5FC;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
 main {
@@ -15,21 +16,19 @@ main {
 
 .section {
     flex: auto; 
+    background-color: #F3F5FC;
 }
 
 .logo {
-    background-color: beige;
     width: 15%;  
     text-align: center;
 }
 
 .left {
-    background-color: aquamarine;
     width: 50%;      
 }
 
 .right {
-    background-color: blueviolet;
     width: 35%;
     padding: 5vh 0;
     display: flex; 
@@ -42,8 +41,6 @@ main {
     height: auto;
     display: block;
     margin: 5vh auto 0; 
-    border-style: solid;
-    border-color: black;
 }
 
 .caja-mensaje {
@@ -51,10 +48,22 @@ main {
     height: 60%;
 }
 
+textarea {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+textarea::placeholder {
+    color: #0A3871;
+}
+
 #txtCajaMensaje {
     height: 100%;
     width: 100%;
-    background-color:aquamarine;
+    font-size: 32px;
+    line-height: 48px;
+    color: #0A3871;
+    background-color: #F3F5FC;
     border: none;
     resize: none;
 } 
@@ -62,6 +71,12 @@ main {
 #txtCajaMensaje:focus {
     border: none;
     outline: none;
+}
+
+small {
+    font-size: 12px;
+    line-height: 18px;
+    color: #0A3871;
 }
 
 small::before {
@@ -76,7 +91,7 @@ small::before {
 
 .requisito {
     position: absolute;
-    bottom: 21vh;
+    bottom: 20vh;
 }
 
 .contenedor-botones {
@@ -90,40 +105,73 @@ button {
     width: 46%;
     padding: 10px 20px; 
     font-size: 16px; 
+    line-height: 19.36px;
     text-align: center; 
     cursor: pointer; 
     border: none; 
     border-radius: 14px; 
-    background-color: #007bff; 
-    color: #ffffff; 
     text-decoration: none;
 }
 
-button:hover {
+.boton-encriptar {
+    background-color: #0A3871;  
+    color: #ffffff; 
+}
+
+.boton-encriptar:hover {
     background-color: #0056b3; 
+}
+
+.boton-desencriptar {
+    background-color: #F3F5FC;
+    color: #0A3871; 
+    border: 1px solid #0A3871;
+}
+
+.boton-desencriptar:hover {
+    background-color: #0056b3; 
+    color: #ffffff;
+}
+
+.boton-copiar {
+    background-color: #F3F5FC;
+    color: #0A3871; 
+    border: 1px solid #0A3871;
+}
+
+.boton-copiar:hover {
+    background-color: #0056b3; 
+    color: #ffffff;
 }
 
 button:active {
-    background-color: #0056b3; 
     transform: translateY(1px); 
 }
 
+.boton-copiar {
+    margin-top: 25px;
+    width: 80%;
+}
 .caja-traduccion {
     height: 100%;
     width: 80%;
-    background-color: #0dff00;
+    background-color: #FFFFFF;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.2);
     border-radius: 32px;
     display: flex; 
     flex-direction: column;
-    /* justify-content: center;  */
     align-items: center
 }
+
 
 #txtCajaTraduccion {
     height: 75vh;
     width: 80%;
-    background-color:whitesmoke;
-    padding-top: 1rem;
+    font-size: 18px;
+    line-height: 36px;
+    color: #495057;
+    background-color:#FFFFFF;
+    padding-top: 2rem;
     border: none;
     border-radius: 20px;
     resize: none;
@@ -132,9 +180,4 @@ button:active {
 #txtCajaTraduccion:focus {
     border: none;
     outline: none;
-}
-
-.boton-copiar {
-    margin-top: 25px;
-    width: 80%;
 }
