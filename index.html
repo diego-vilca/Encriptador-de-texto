@@ -16,7 +16,7 @@
                 <textarea id="txtCajaMensaje" placeholder="Ingrese el texto aqui"></textarea>                
             </div>
             <div class="caja-botones">
-                <p><small>Solo minúsculas y sin acentos</small></p>
+                <p class="requisito"><small>Solo minúsculas y sin acentos</small></p>
                 <div class="contenedor-botones">
                     <button id="btnEncriptar" onclick="encriptar()">Encriptar</button>
                     <button id="btnDesencriptar" onclick="desencriptar()">Desencriptar</button>
@@ -24,8 +24,11 @@
             </div>
         </section>
 
-        <section class="section right">            
-            <textarea id="txtCajaTraduccion"></textarea>
+        <section class="section right">    
+            <div class="caja-traduccion">
+                <textarea id="txtCajaTraduccion"></textarea>
+                <button class="boton-copiar">Copiar</button>
+            </div>        
         </section>        
     </main>
     

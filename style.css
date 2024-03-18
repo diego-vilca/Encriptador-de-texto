@@ -31,13 +31,17 @@ main {
 .right {
     background-color: blueviolet;
     width: 35%;
+    padding: 5vh 0;
+    display: flex; 
+    justify-content: center; 
+    align-items: center
 }
 
 #idLogo {
     max-width: 50%; 
     height: auto;
     display: block;
-    margin: 30px auto 0; 
+    margin: 5vh auto 0; 
     border-style: solid;
     border-color: black;
 }
@@ -67,12 +71,18 @@ small::before {
 
 .caja-botones {
     height: 20%;
+    position: relative;
+}
+
+.requisito {
+    position: absolute;
+    bottom: 21vh;
 }
 
 .contenedor-botones {
     display: flex; 
     justify-content: space-between; 
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 button {
@@ -83,7 +93,7 @@ button {
     text-align: center; 
     cursor: pointer; 
     border: none; 
-    border-radius: 5px; 
+    border-radius: 14px; 
     background-color: #007bff; 
     color: #ffffff; 
     text-decoration: none;
@@ -96,4 +106,35 @@ button:hover {
 button:active {
     background-color: #0056b3; 
     transform: translateY(1px); 
+}
+
+.caja-traduccion {
+    height: 100%;
+    width: 80%;
+    background-color: #0dff00;
+    border-radius: 32px;
+    display: flex; 
+    flex-direction: column;
+    /* justify-content: center;  */
+    align-items: center
+}
+
+#txtCajaTraduccion {
+    height: 75vh;
+    width: 80%;
+    background-color:whitesmoke;
+    padding-top: 1rem;
+    border: none;
+    border-radius: 20px;
+    resize: none;
+}
+
+#txtCajaTraduccion:focus {
+    border: none;
+    outline: none;
+}
+
+.boton-copiar {
+    margin-top: 25px;
+    width: 80%;
 }
