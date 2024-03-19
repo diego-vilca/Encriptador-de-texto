@@ -62,8 +62,8 @@ textarea::placeholder {
 #txtCajaMensaje {
     height: 100%;
     width: 100%;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 28px;
+    line-height: 40px;
     color: #0A3871;
     background-color: #F3F5FC;
     border: none;
@@ -81,14 +81,15 @@ small {
     color: #0A3871;
 }
 
-small::before {
-    content: "\1F6C8";
-    padding-right: 2px; 
-}
 
 .caja-botones {
     height: 20%;
     position: relative;
+}
+
+.requisito::before {
+    content: "\1F6C8";
+    padding-right: 2px; 
 }
 
 .requisito {
@@ -151,7 +152,7 @@ button:active {
 }
 
 .boton-copiar {
-    width: 60%;
+    width: 65%;
     position: absolute;
     bottom: 8%;
 }
@@ -164,7 +165,7 @@ button:active {
     color: #495057;
     background-color:#FFFFFF;
     box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
+    padding: 1.5rem;
     border: none;
     border-radius: 32px;
     resize: none;
@@ -178,4 +179,42 @@ button:active {
 footer {
     height: 10vh;
     background-color: #0A3871;
+    color: #F3F5FC;
+    text-align: center; 
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+  
+.redes-sociales {
+    list-style: none; 
+    padding: 8px 0; 
+}
+
+.redes-sociales li {
+    display: inline-block; 
+    margin-right: 10px; 
+    transition: transform 0.5s ease;
+}
+
+.redes-sociales li:hover {
+    transform: translateY(-4px);
+}
+
+.redes-sociales li a {
+    color: #F3F5FC;
+}
+
+.redes-sociales i {
+    width: 30px; 
+    height: 20px; 
+    vertical-align: middle; 
+}
+  
+.copyright {
+    color: #F3F5FC;
 }

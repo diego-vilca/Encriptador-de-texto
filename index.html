@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de Texto</title>
     <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/e44e7fec30.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
@@ -19,7 +22,7 @@
                 <textarea id="txtCajaMensaje" placeholder="Ingrese el texto aqui"></textarea>                
             </div>
             <div class="caja-botones">
-                <p class="requisito"><small>Solo minúsculas y sin acentos</small></p>
+                <small class="requisito">Solo minúsculas y sin acentos</small>
                 <div class="contenedor-botones">
                     <button class="boton-encriptar" onclick="encriptar()">Encriptar</button>
                     <button class="boton-desencriptar" onclick="desencriptar()">Desencriptar</button>
@@ -28,13 +31,21 @@
         </section>
 
         <section class="section right">    
-            <!-- <div class="caja-traduccion"> -->
                 <textarea id="txtCajaTraduccion"></textarea>
                 <button class="boton-copiar">Copiar</button>
-            <!-- </div>         -->
         </section>        
     </main>    
-    <footer></footer>
+    <footer>
+        <div class="redes">
+            <ul class="redes-sociales">
+                <li><a href="https://www.reddit.com/r/FreeGameFindings/new/"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="www.youtube.com"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="www.youtube.com"><i class="fab fa-github"></i></a></li>
+                <li><a href="www.youtube.com"><i class="far fa-envelope"></i></a></li>
+            </ul>
+            <small class="copyright">&copy; 2024 Diego Victor Vilca | All Rights Reserved</small>
+        </div>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>
