@@ -30,10 +30,12 @@ main {
 
 .right {
     width: 35%;
-    padding: 2.5% 0;
+    padding: 1% 0;
     display: flex; 
+    flex-direction: column;
     justify-content: center; 
-    align-items: center
+    align-items: center;
+    position: relative;
 }
 
 #idLogo {
@@ -63,8 +65,7 @@ textarea::placeholder {
     font-size: 32px;
     line-height: 48px;
     color: #0A3871;
-    /* background-color: #F3F5FC; */
-    background-color: aqua;
+    background-color: #F3F5FC;
     border: none;
     resize: none;
 } 
@@ -88,7 +89,6 @@ small::before {
 .caja-botones {
     height: 20%;
     position: relative;
-    background-color: beige;
 }
 
 .requisito {
@@ -151,32 +151,22 @@ button:active {
 }
 
 .boton-copiar {
-    margin-top: 25px;
-    width: 80%;
+    width: 60%;
+    position: absolute;
+    bottom: 8%;
 }
-.caja-traduccion {
-    height: 100%;
-    width: 80%;
-    background-color: #FFFFFF;
-    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.2);
-    border-radius: 32px;
-    display: flex; 
-    flex-direction: column;
-    align-items: center
-}
-
 
 #txtCajaTraduccion {
-    height: 87.5%;
+    height: 96%;
     width: 80%;
     font-size: 18px;
-    line-height: 36px;
+    line-height: 28px;
     color: #495057;
-    /* background-color:#FFFFFF; */
-    background-color: blueviolet;
-    padding-top: 2rem;
+    background-color:#FFFFFF;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
     border: none;
-    border-radius: 20px;
+    border-radius: 32px;
     resize: none;
 }
 
