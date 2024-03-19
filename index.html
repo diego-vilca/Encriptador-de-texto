@@ -31,8 +31,13 @@
         </section>
 
         <section class="section right">    
-                <textarea id="txtCajaTraduccion"></textarea>
-                <button class="boton-copiar">Copiar</button>
+                <textarea id="txtCajaTraduccion" disabled></textarea>
+                <button class="boton-copiar" onclick="copiarTraduccion()">Copiar</button>
+                <div class="escondido" hidden>
+                    <img src="" alt="">
+                    <p>Ningún mensaje fue encontrado</p>
+                    <p>Ingrese el texto que desees encriptar o desencriptar</p>
+                </div>
         </section>        
     </main>    
     <footer>

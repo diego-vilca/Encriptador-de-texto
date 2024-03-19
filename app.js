@@ -14,6 +14,10 @@ Debe ser posible convertir una palabra para la versión encriptada también devo
 function encriptar(){
     let str = obtenerCadena('txtCajaMensaje');
 
+    if(!mensajeValido(str)) {
+        return
+    }
+
     for (let i = 0; i < str.length; i++) {
 
         if (str[i] == 'e') {
@@ -55,7 +59,7 @@ function encriptar(){
 }
 
 function desencriptar(){
-    let str = obtenerCadena('txtCajaTraduccion');
+    let str = obtenerCadena('txtCajaMensaje');
     
     str = str.replace(/enter/g, 'e');
     str = str.replace(/imer/g, 'i');
@@ -67,9 +71,9 @@ function desencriptar(){
     
     mostrarCadena(str, 'txtCajaTraduccion');
 
+    return;
+
 }
-
-
 
 function reemplazarVocal(cadena, indice, reemplazo){
     return cadena.substring(0,indice) + reemplazo + cadena.substring(indice+1);
@@ -81,9 +85,38 @@ function obtenerCadena(idCadena){
 
 function mostrarCadena(cadena, idTextBox){
     document.getElementById(idTextBox).value = cadena;
-    //console.log(cadena);
 }
 
 function limpiarCaja(idCaja){
     document.getElementById(idCaja).value = '';  
+}
+
+function copiarTraduccion(){
+    let cajaTexto = document.getElementById("txtCajaTraduccion");
+    cajaTexto.disabled = false;
+    //selecciono el texto
+    cajaTexto.select();
+    cajaTexto.setSelectionRange(0, 99999); 
+    
+    //guardo el texto
+    document.execCommand("copy");
+    
+    //deselecciono el texto
+    cajaTexto.setSelectionRange(0, 0);
+    cajaTexto.disabled = true;
+    
+    limpiarCaja("txtCajaMensaje")
+
+    return alert("¡Traducción copiada al portapapeles!");
+}
+
+function mensajeValido(mensaje){
+    let regex = /^[a-z\s]*$/;
+
+    if (!regex.test(mensaje)) {
+        alert("Por favor, ingresa solo letras minúsculas y espacios.");
+        return false;
+    }
+
+    return true;
 }
