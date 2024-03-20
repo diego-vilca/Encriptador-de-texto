@@ -54,6 +54,10 @@ function encriptar(){
 
     }
 
+
+    //ajusto el tamaño dinamicamente para pantallas pequeñas
+    // txtAreaPantallasMoviles();
+
     //muestro mi traducción
     mostrarCadena(str, 'txtCajaTraduccion');
 
@@ -126,4 +130,17 @@ function mensajeValido(mensaje){
     }
 
     return true;
+}
+
+function txtAreaPantallasMoviles() {
+    if (window.innerWidth <= 768) {
+        document.getElementById('txtCajaTraduccion').addEventListener('input', autoResizeTextarea);
+        console.log("ENTRE");
+    }
+}
+
+function autoResizeTextarea() {
+    let textarea = document.getElementById('myTextarea');
+    textarea.style.height = 'auto'; // Restaurar la altura predeterminada
+    textarea.style.height = textarea.scrollHeight + 'px'; // Ajustar la altura al contenido
 }

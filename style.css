@@ -11,7 +11,7 @@ body {
 
 main {
     display: flex;
-    height: 90vh;
+    min-height: 90vh;
 }
 
 .section {
@@ -40,13 +40,13 @@ main {
 
 #idLogo {
     max-width: 50%; 
-    height: auto;
+    min-height: auto;
     display: block;
     margin: 5vh auto 0; 
 }
 
 .caja-mensaje {
-    height: 80%;
+    min-height: 80%;
     padding-top: 15%;
 }
 
@@ -60,7 +60,7 @@ textarea::placeholder {
 }
 
 #txtCajaMensaje {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     font-size: 28px;
     line-height: 40px;
@@ -83,7 +83,7 @@ small {
 
 
 .caja-botones {
-    height: 20%;
+    min-height: 20%;
     position: relative;
 }
 
@@ -162,7 +162,7 @@ button:active {
 }
 
 #txtCajaTraduccion {
-    height: 96%;
+    min-height: 96%;
     width: 80%;
     font-size: 18px;
     line-height: 28px;
@@ -183,6 +183,7 @@ button:active {
 .caja-munieco {
     width: 60%;
     position: absolute;
+    overflow: hidden;
 }
 
 .img-munieco {
@@ -204,7 +205,7 @@ button:active {
 }
 
 footer {
-    height: 10vh;
+    min-height: 10vh;
     background-color: #0A3871;
     color: #F3F5FC;
     text-align: center; 
@@ -245,3 +246,237 @@ footer {
 .copyright {
     color: #F3F5FC;
 }
+
+
+@media screen and (max-width:768px){
+
+    body {
+        /* min-height: 1174px; */
+        height: 1174px;
+    }
+
+    main{
+        /* max-height: 90%; */
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        /* max-height: 10%; */
+        height: 10%;
+        display: flex;
+        justify-content: center;
+    }
+        
+    /* #sectionLogo {
+        flex-basis: 20%;
+    } */
+
+    .logo {
+        flex-basis: 20%;
+    }
+    
+    /* #sectionMensaje {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        flex-basis: 50%;
+        padding: 0 3rem;
+    } */
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        flex-basis: 50%;
+        padding: 0 3rem;
+    }
+    
+    /* #sectionTraduccion {
+        height: 30%;
+        padding: 2rem 3rem;
+    }  */
+
+    .right {
+        height: 30%;
+        padding: 2rem 3rem;
+    }
+
+    .contenedor-botones {
+        padding-top: 40px;;
+    }
+
+    button {
+        padding: 20px 20px;
+    }
+    
+    .requisito {
+        bottom: 75%;
+    }
+
+    .img-munieco {
+        display: none;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+
+    #idLogo {
+        margin-left: 0%;
+        text-align: left;
+    }
+
+    .caja-mensaje {
+        padding: 0%;
+    }
+
+    #txtCajaTraduccion {
+        width: 100%;
+        resize:vertical;
+    }
+
+    .boton-copiar {
+        width: 80%;
+        bottom: 18%;
+    }
+
+    .redes-sociales {
+        list-style: none; 
+        padding-top: 40;
+    }
+        
+    .redes-sociales i {
+        width: 50px;
+    }
+   
+
+} 
+
+
+@media screen and (max-width:375px){
+
+    body {        
+        /* min-height: 933px; */
+        height: 933px;
+    }
+
+    main{
+        /* max-height: 90%; */
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        /* max-height: 10%; */
+        height: 10%;
+        display: flex;
+        justify-content: center;
+    }
+        
+    /* #sectionLogo {
+        flex-basis: 20%;
+    } */
+
+    .logo {
+        flex-basis: 20%;
+    }
+    
+    /* #sectionMensaje {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        flex-basis: 50%;
+        padding: 0 3rem;
+    } */
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        flex-basis: 50%;
+        padding: 0 2rem;
+    }
+    
+    /* #sectionTraduccion {
+        height: 30%;
+        padding: 2rem 3rem;
+    }  */
+
+    .right {
+        height: 30%;
+        padding: 2rem 2rem;
+    }
+
+    .caja-mensaje {
+        min-height: 60%;
+        padding: 0%;
+    }
+
+    .caja-botones {
+        min-height: 40%;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    
+    .contenedor-botones {
+        width: 100%;
+        display: inline-block;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center; 
+        /* padding-top: 20px 20px; */
+    }
+
+    button {
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    .boton-encriptar, .boton-desencriptar {
+        margin: 0.5rem 0;
+    }
+    
+    .requisito {
+        bottom: 75%;
+    }
+
+    .img-munieco {
+        display: none;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+
+    #idLogo {
+        margin-left: 0%;
+        text-align: left;
+    }
+    
+    #txtCajaTraduccion {
+        width: 100%;
+        resize:vertical;
+    }
+
+    .boton-copiar {
+        width: 60%;
+        bottom: 18%;
+    }
+
+    .redes-sociales {
+        list-style: none; 
+        padding-top: 40;
+    }
+        
+    .redes-sociales i {
+        width: 50px;
+    }
+   
+
+} 
