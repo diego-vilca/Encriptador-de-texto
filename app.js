@@ -54,7 +54,6 @@ function encriptar(){
 
     }
 
-
     //ajusto el tamaño dinamicamente para pantallas pequeñas
     // txtAreaPantallasMoviles();
 
