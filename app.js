@@ -14,6 +14,7 @@ Debe ser posible convertir una palabra para la versión encriptada también devo
 function encriptar(){
     let str = obtenerCadena('txtCajaMensaje');
 
+    //si el mensaje no es valido salgo de la función
     if(!mensajeValido(str)) {
         return
     }
@@ -53,7 +54,13 @@ function encriptar(){
 
     }
 
+    //muestro mi traducción
     mostrarCadena(str, 'txtCajaTraduccion');
+
+    //habilito el botón 'copiar'
+    document.getElementById("btnCopiar").classList.remove("hide-btn");
+    //oculto la imagen
+    document.getElementById("caja-munieco").setAttribute("hidden", true);
 
     return;
 }

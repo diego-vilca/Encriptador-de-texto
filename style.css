@@ -142,6 +142,10 @@ button {
     border: 1px solid #0A3871;
 }
 
+.hide-btn {
+    display: none;
+}
+
 .boton-copiar:hover {
     background-color: #0A3871; 
     color: #ffffff;
@@ -174,6 +178,29 @@ button:active {
 #txtCajaTraduccion:focus {
     border: none;
     outline: none;
+}
+
+.caja-munieco {
+    width: 60%;
+    position: absolute;
+}
+
+.img-munieco {
+    width: 100%;
+    height: auto;
+}
+
+#cadena-uno {
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    margin: .5rem;
+}
+
+#cadena-dos {
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
 }
 
 footer {
